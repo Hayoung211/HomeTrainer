@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    tools:context=".ui.challenge_one_day.OnedayFragment">
+
+    <TextView
+        android:id="@+id/challenge_one_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/design_default_color_background"
+        android:text="@string/challenge_one_day"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/one_day_challenge_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="열려있는 챌린지(3/10)"
+        android:textSize="17sp"
+        android:layout_below="@id/challenge_one_day"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/one_day_challenge_starting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="도전중인 챌린지 (1/2)"
+        android:textSize="17sp"
+        android:layout_below="@id/one_day_challenge_state"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/one_day_challenge_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="완료한 챌린지 (1/3)"
+        android:textSize="17sp"
+        android:layout_below="@id/one_day_challenge_state"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail1"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/one_day_challenge_thumbnail1"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/one_day_challenge_starting"
+        app:srcCompat="@mipmap/ic_hometrainer_logo_foreground"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/one_day_challenge_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail1"
+        android:layout_below="@id/one_day_challenge_starting"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="15분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/one_day_challenge_take_up1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one_day_challenge_title1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail1"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="도전"
+        android:textSize="15dp"
+        android:textColor="#0099FF"
+        android:background="#00FF0000"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DB7093"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/one_day_challenge_thumbnail1"/>
+
+    <ImageView
+        android:id="@+id/one_day_challenge_thumbnail2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/line1"
+        app:srcCompat="@mipmap/ic_hometrainer_logo_foreground"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/one_day_challenge_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail2"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="15분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/one_day_challenge_take_up2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one_day_challenge_title2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail2"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="도전"
+        android:textSize="15dp"
+        android:textColor="#0099FF"
+        android:background="#00FF0000"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DB7093"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/one_day_challenge_thumbnail2"/>
+
+    <ImageView
+        android:id="@+id/one_day_challenge_thumbnail3"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/line2"
+        app:srcCompat="@mipmap/ic_hometrainer_logo_foreground"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/one_day_challenge_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail3"
+        android:layout_below="@id/line2"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="15분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/one_day_challenge_take_up3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one_day_challenge_title3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail3"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="도전"
+        android:textSize="15dp"
+        android:textColor="#0099FF"
+        android:background="#00FF0000"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DB7093"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/one_day_challenge_thumbnail3"/>
+
+    <ImageView
+        android:id="@+id/one_day_challenge_thumbnail4"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/line3"
+        app:srcCompat="@mipmap/ic_hometrainer_logo_foreground"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/one_day_challenge_title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail4"
+        android:layout_below="@id/line3"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="15분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/one_day_challenge_take_up4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one_day_challenge_title4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/one_day_challenge_thumbnail4"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="도전"
+        android:textSize="15dp"
+        android:textColor="#0099FF"
+        android:background="#00FF0000"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DB7093"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/one_day_challenge_thumbnail4"/>
+
+</RelativeLayout>

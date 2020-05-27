@@ -1,0 +1,2 @@
+rootProject.name='HomeTrainer'
+include ':app'
