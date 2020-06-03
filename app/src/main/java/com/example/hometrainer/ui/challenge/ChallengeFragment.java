@@ -11,7 +11,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.hometrainer.MainActivity;
 import com.example.hometrainer.R;
+import com.example.hometrainer.ui.challenge_month_day.MonthdayFragment;
 import com.example.hometrainer.ui.challenge_one_day.OnedayFragment;
+import com.example.hometrainer.ui.challenge_week_day.WeekdayFragment;
 
 public class ChallengeFragment extends Fragment {
 
@@ -30,6 +32,24 @@ public class ChallengeFragment extends Fragment {
             public void onClick(View v) {
                 MainActivity activity = (MainActivity)getActivity();
                 activity.replaceFragment(OnedayFragment.newInstance());
+
+            }
+        });
+        Button one_day2 = (Button) root.findViewById(R.id.week_day_challenge_more);
+        one_day2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                MainActivity activity = (MainActivity)getActivity();
+                activity.replaceFragment(WeekdayFragment.newInstance());
+
+            }
+        });
+        Button one_day3 = (Button) root.findViewById(R.id.month_day_challenge_more);
+        one_day3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                MainActivity activity = (MainActivity)getActivity();
+                activity.replaceFragment(MonthdayFragment.newInstance());
 
             }
         });

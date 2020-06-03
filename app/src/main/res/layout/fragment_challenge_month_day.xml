@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".ui.challenge_month_day.MonthdayFragment">
+
+    <TextView
+        android:id="@+id/challenge_month_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/design_default_color_background"
+        android:text="30일 챌린지"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/challenge_month_day"
+        android:layout_marginLeft="20dp"
+        android:text="열려있는 챌린지(3/10)"
+        android:textSize="17sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_starting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_state"
+        android:layout_marginLeft="20dp"
+        android:text="도전중인 챌린지 (1/2)"
+        android:textSize="17sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_state"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail1"
+        android:text="완료한 챌린지 (1/3)"
+        android:textSize="17sp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail1"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/month_day_challenge_starting"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_starting"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="23dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail1"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up1"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail1"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail1"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail2"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up2"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail2"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail2"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail3"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail3"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up3"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail3"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail3"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail4"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line3"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail4"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up4"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail4"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail4"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail5"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line4"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail5"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up5"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title5"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail5"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail5"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail6"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line5"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail6"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up6"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title6"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail6"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail6"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail7"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line6"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line6"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail7"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up7"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title7"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail7"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail7"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail8"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line7"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line7"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail8"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up8"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title8"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail8"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail8"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail9"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line8"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line8"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail9"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up9"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title9"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail9"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line9"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail9"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail10"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line9"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line9"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail10"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up10"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail10"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line10"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail10"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail11"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line10"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line10"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail11"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up11"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title11"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail11"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line11"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail11"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail12"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line11"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line11"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail12"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up12"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title12"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail12"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line12"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail12"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail13"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line12"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line12"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail13"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up13"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title13"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail13"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line13"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail13"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail14"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line13"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line13"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail14"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up14"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title14"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail14"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line14"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail14"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail15"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line14"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line14"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail15"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up15"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title15"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail15"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line15"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail15"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail16"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line15"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line15"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail16"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up16"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title16"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail16"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line16"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail16"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail17"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line16"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line16"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail17"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up17"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title17"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail17"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line17"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail17"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail18"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line17"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line17"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail18"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up18"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title18"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail18"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line18"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail18"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail19"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line18"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line18"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail19"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up19"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title19"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail19"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line19"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail19"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail20"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line19"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line19"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail20"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up20"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title20"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail20"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line20"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail20"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail21"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line20"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line20"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail21"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up21"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title21"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail21"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line21"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail21"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail22"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line21"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line21"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail22"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up22"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title22"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail22"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line22"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail22"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail23"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line22"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line22"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail23"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up23"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title23"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail23"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line23"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail23"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/month_day_challenge_thumbnail24"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/line23"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/month_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line23"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail24"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up24"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title24"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail24"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line24"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail24"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail25"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line24"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line24"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail25"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up25"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title25"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail25"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line25"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail25"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail26"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line25"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line25"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail26"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up26"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title26"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail26"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line26"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail26"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail27"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line26"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line26"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail27"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up27"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title27"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail27"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line27"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail27"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail28"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line27"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line27"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail28"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up28"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title28"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail28"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line28"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail28"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail29"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line28"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line28"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail29"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up29"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title29"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail29"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line29"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail29"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+    android:id="@+id/month_day_challenge_thumbnail30"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/line29"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    app:srcCompat="@drawable/month_day_challenge_thumbnail"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/month_day_challenge_title30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line29"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail30"
+        android:text="30분 전신운동"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/month_day_challenge_take_up30"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_day_challenge_title30"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/month_day_challenge_thumbnail30"
+        android:background="#00FF0000"
+        android:text="도전"
+        android:textColor="#0099FF"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line30"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/month_day_challenge_thumbnail30"
+        android:layout_marginTop="10dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</RelativeLayout>
+</ScrollView>

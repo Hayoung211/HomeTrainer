@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".ui.challenge.ChallengeFragment">
@@ -35,8 +39,9 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/one_day_challenge_state"
-        app:srcCompat="@mipmap/ic_hometrainer_logo_foreground"
-        tools:ignore="MissingConstraints" />
+        android:src="@drawable/one_day_challenge_thumbnail"
+        tools:ignore="MissingConstraints"
+         />
 
     <TextView
         android:id="@+id/one_day_challenge_title"
@@ -46,7 +51,7 @@
         android:layout_below="@id/one_day_challenge_state"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="50dp"
-        android:text="15분 전신운동"
+        android:text="전신 유산소 운동"
         android:textSize="17dp"
         tools:ignore="MissingConstraints" />
 
@@ -112,20 +117,21 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/week_day_challenge_state"
-        app:srcCompat="@mipmap/ic_hometrainer_logo_foreground"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:src="@drawable/week_day_challenge_thumbnail"
+        android:contentDescription="TODO" />
 
-    <TextView
-        android:id="@+id/week_day_challenge_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/one_day_challenge_thumbnail"
-        android:layout_below="@id/week_day_challenge_state"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="50dp"
-        android:text="10분 전신스트레칭"
-        android:textSize="17dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/week_day_challenge_title"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/week_day_challenge_state"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/one_day_challenge_thumbnail"
+            android:text="8분 전신운동"
+            android:textSize="17dp"
+            tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/week_day_challenge_take_up"
@@ -183,13 +189,14 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/month_day_challenge_thumbnail"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/month_day_challenge_state"
-        app:srcCompat="@mipmap/ic_hometrainer_logo_foreground"
+        android:src="@drawable/month_day_challenge_thumbnail"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -200,7 +207,7 @@
         android:layout_below="@id/month_day_challenge_state"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="50dp"
-        android:text="30분 코어운동"
+        android:text="30분 전신운동"
         android:textSize="17dp"
         tools:ignore="MissingConstraints" />
 
@@ -239,3 +246,4 @@
 
 
 </RelativeLayout>
+</ScrollView>
