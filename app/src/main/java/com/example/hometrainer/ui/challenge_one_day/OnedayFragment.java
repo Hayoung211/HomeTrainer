@@ -22,9 +22,8 @@ public class OnedayFragment extends Fragment implements MainActivity.onKeyBackPr
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_challenge_one_day, container, false);
 
-
-
         return root;
+
     }
 
     @Override

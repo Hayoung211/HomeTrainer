@@ -1,13 +1,9 @@
 package com.example.hometrainer;
 
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 import android.view.Menu;
 
-import com.example.hometrainer.ui.challenge.ChallengeFragment;
-import com.example.hometrainer.ui.home.HomeFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.fragment.app.Fragment;
@@ -21,7 +17,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity<EndToast> extends AppCompatActivity {
+    private static String IP_ADDRESS = "172.30.1.37";
+    private static String TAG = "phptest";
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -50,6 +52,36 @@ public class MainActivity<EndToast> extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        String test = "http://172.30.1.37/test1.php";
+        URLConnector task = new URLConnector(test);
+
+        task.start();
+
+        try{
+            task.join();
+            System.out.println("waiting... for result");
+        }
+        catch(InterruptedException e){
+
+        }
+
+        String result = task.getResult();
+
+        String id;
+        try {
+            JSONObject root = new JSONObject(result);
+            JSONArray ja = root.getJSONArray("result");
+
+            for(int i = 0; i < ja.length();i++)
+            {
+                JSONObject jo = ja.getJSONObject(i);
+                id = jo.getString("seq");
+                System.out.println(id);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
