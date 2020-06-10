@@ -28,7 +28,7 @@ import com.example.hometrainer.ui.challenge_one_day.OnedayFragment;
 import static android.content.Context.SENSOR_SERVICE;
 import static androidx.core.content.ContextCompat.getSystemService;
 
-public class HomeFragment extends Fragment implements SensorEventListener {
+public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
@@ -36,12 +36,17 @@ public class HomeFragment extends Fragment implements SensorEventListener {
         return new HomeFragment();
     }
 
-    TextView walk;
+    private TextView walk;
     private int mSteps = 0;
     private int mCounterSteps = 0;
 
     private SensorManager sensorManager;
-    private Sensor stepCountSensor;
+    private float acceleration;
+
+    private float previousY, currentY;
+    private int steps;
+
+    int threshold;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,9 +54,16 @@ public class HomeFragment extends Fragment implements SensorEventListener {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         Button challenge_more = (Button) root.findViewById(R.id.challenge_more);
 
+        walk = (TextView) root.findViewById(R.id.manbo_result);
+
+        threshold = 7;
+
+        previousY = currentY = steps = 0;
+
+        acceleration = 0.0f;
+
         sensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
-        stepCountSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        EditText walk = (EditText)root.findViewById(R.id.manbo_result);
+        sensorManager.registerListener(stepDetector, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
 
         challenge_more.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -65,39 +77,29 @@ public class HomeFragment extends Fragment implements SensorEventListener {
         return root;
     }
 
-    public void onStart() {
-        super.onStart();
-        if(stepCountSensor != null) {
-            sensorManager.registerListener(this, stepCountSensor, SensorManager.SENSOR_DELAY_GAME);
-        }
-    }
+    private SensorEventListener stepDetector = new SensorEventListener() {
 
-    public void onStop() {
-        super.onStop();
-        if(sensorManager != null) {
-            sensorManager.unregisterListener(this);
-        }
-    }
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            float x = event.values[0];
+            float y = event.values[1];
+            float z = event.values[2];
 
-    @Override
-    public void onSensorChanged(SensorEvent event) {
-        if(event.sensor.getType() == Sensor.TYPE_STEP_COUNTER){
+            currentY = y;
 
-            //stepcountsenersor는 앱이 꺼지더라도 초기화 되지않는다. 그러므로 우리는 초기값을 가지고 있어야한다.
-            if (mCounterSteps < 1) {
-                // initial value
-                mCounterSteps = (int) event.values[0];
+            if (Math.abs(currentY - previousY) > threshold) {
+                walk.setText(String.valueOf(steps));
+                steps++;
             }
-            //리셋 안된 값 + 현재값 - 리셋 안된 값
-            mSteps = (int) event.values[0] - mCounterSteps;
-            walk.setText(Integer.toString(mSteps));
-            System.out.println( "New step detected by STEP_COUNTER sensor. Total step count: " + mSteps );
+
+            previousY = y;
+
+
         }
 
-    }
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-    }
+        }
+    };
 }
