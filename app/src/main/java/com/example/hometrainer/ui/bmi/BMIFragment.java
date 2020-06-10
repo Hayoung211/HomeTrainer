@@ -33,7 +33,7 @@ public class BMIFragment extends Fragment {
 
         final InputMethodManager mInputMethodManager = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         ActionBar actionBar = ((MainActivity) getActivity()).getActionBar();
-        actionBar.show();
+        actionBar.setTitle("dkdkdk");
 
         final Button show_result = (Button) root.findViewById(R.id.bmi_result_button);
         show_result.setOnClickListener(new View.OnClickListener() {
