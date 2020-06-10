@@ -91,7 +91,7 @@ public class HomeFragment extends Fragment implements SensorEventListener {
             //리셋 안된 값 + 현재값 - 리셋 안된 값
             mSteps = (int) event.values[0] - mCounterSteps;
             walk.setText(Integer.toString(mSteps));
-            Log.i("log: ", "New step detected by STEP_COUNTER sensor. Total step count: " + mSteps );
+            System.out.println( "New step detected by STEP_COUNTER sensor. Total step count: " + mSteps );
         }
 
     }
