@@ -1,14 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ui.record.RecordFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/day_check"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="날자 표시 칸"
+        android:textSize="35dp"
+        android:layout_marginTop="19dp"
+        android:layout_centerHorizontal="true"/>
 
-</FrameLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/before"
+        android:textSize="35dp"
+        android:layout_marginTop="19dp"
+        android:background="#00FF0000"
+        android:stateListAnimator="@null"
+        android:layout_toLeftOf="@id/day_check" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/after"
+        android:textSize="35dp"
+        android:layout_marginTop="19dp"
+        android:background="#00FF0000"
+        android:stateListAnimator="@null"
+        android:layout_toRightOf="@id/day_check" />
+
+    <View
+        android:id="@+id/first_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/day_check"/>
+
+    <TextView
+        android:id="@+id/today_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 몸무게"
+        android:textSize="35dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/first_line"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/today_weight_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="몸무게 칸"
+        android:textSize="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/today_weight"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/second_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/today_weight_result"/>
+
+    <TextView
+        android:id="@+id/today_walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 만보기"
+        android:textSize="35dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/second_line"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/today_walk_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="걸음수 칸"
+        android:textSize="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/today_walk"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/third_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DB7093"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/today_walk_result"/>
+
+    <TextView
+        android:id="@+id/today_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 눈바디"
+        android:textSize="35dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/third_line"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/today_picture_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/today_picture"
+        android:src="@drawable/popcon"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+</ScrollView>

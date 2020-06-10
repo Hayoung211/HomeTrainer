@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,6 +22,18 @@
         android:background="@color/design_default_color_background"
         android:text="@string/home_man_bo"
         android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/manbo_result"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_background"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/manbo"
+        android:text="0"
         tools:ignore="MissingConstraints" />
 
     <View

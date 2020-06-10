@@ -22,6 +22,8 @@
     <string name="challenge_week_day">"7일 챌린지"</string>
     <string name="challenge_month_day">"30일 챌린지"</string>
 
+    <string name="before">"&lt;"</string>
+    <string name="after">"&gt;"</string>
 
     <string name="home_second">Home Second</string>
 
