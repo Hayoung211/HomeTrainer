@@ -76,8 +76,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/one_day_challenge_take_up"
-        android:layout_toRightOf="@id/one_day_challenge_take_up"
         android:text="더보기"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -154,8 +155,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/week_day_challenge_take_up"
-        android:layout_toRightOf="@id/week_day_challenge_take_up"
         android:text="더보기"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -232,8 +234,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/month_day_challenge_take_up"
-        android:layout_toRightOf="@id/month_day_challenge_take_up"
         android:text="더보기"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         tools:ignore="MissingConstraints" />
 
     <View

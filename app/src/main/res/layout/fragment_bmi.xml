@@ -47,8 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/bmi_announcement"
-        android:layout_toRightOf="@id/bmi_height_input"
-        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="19dp"
         android:text="(cm)"
         android:textSize="25sp" />
@@ -79,8 +79,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/bmi_height"
-        android:layout_toRightOf="@id/bmi_weight_input"
-        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="19dp"
         android:text="(kg)"
         android:textSize="25sp" />
@@ -90,9 +90,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/bmi_weight"
-        android:layout_marginLeft="36dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:layout_toRightOf="@id/bmi_weight"
         android:text="입력"
         android:textSize="25sp" />
 

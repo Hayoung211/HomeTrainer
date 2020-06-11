@@ -17,6 +17,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -65,6 +67,8 @@ public class HomeFragment extends Fragment {
         sensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
         sensorManager.registerListener(stepDetector, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
 
+        final FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+        final Fragment fragment = new Fragment();
         challenge_more.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
