@@ -12,11 +12,12 @@ import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hometrainer.MainActivity;
 import com.example.hometrainer.R;
 
-public class OnedayFragment extends Fragment implements MainActivity.onKeyBackPressedListener {
+public class OnedayFragment extends Fragment {
     public static OnedayFragment newInstance() {
 
         return new OnedayFragment();
@@ -24,16 +25,17 @@ public class OnedayFragment extends Fragment implements MainActivity.onKeyBackPr
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        final FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+
         View root = inflater.inflate(R.layout.fragment_challenge_one_day, container, false);
 
         Button one_day1 = (Button) root.findViewById(R.id.one_day_challenge_take_up1);
                 one_day1.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        MainActivity activity = (MainActivity) getActivity();
-                        activity.replaceFragment(OnedayFragment1.newInstance());
-
-
+                        transaction.add(R.id.nav_host_fragment, OnedayFragment1.newInstance());
+                        transaction.addToBackStack(null);
+                        transaction.commit();
             }
         });
         Button one_day2 = (Button) root.findViewById(R.id.one_day_challenge_take_up2);
@@ -71,21 +73,6 @@ public class OnedayFragment extends Fragment implements MainActivity.onKeyBackPr
 
 
 
-
-
         return root;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        ((MainActivity)context).setOnKeyBackPressedListener(this);
-    }
-
-    @Override
-    public void onBackKey() {
-        MainActivity activity = (MainActivity) getActivity();
-
-        activity.onBackPressed();
     }
 }

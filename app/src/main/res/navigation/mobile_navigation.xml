@@ -42,12 +42,6 @@
         tools:layout="@layout/fragment_challenge_one_day" />
 
     <fragment
-        android:id="@+id/nav_calendar"
-        android:name="com.example.hometrainer.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_challenge"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
         android:id="@+id/nav_bmi"
         android:name="com.example.hometrainer.ui.bmi.BMIFragment"
         android:label="BMI 계산기"

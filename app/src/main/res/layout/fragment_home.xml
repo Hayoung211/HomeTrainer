@@ -52,7 +52,10 @@
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@id/first_line"
         android:text="@string/home_body_check"
+        android:textSize="20sp"
         android:layout_marginTop="25sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="#00FF0000"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -127,26 +130,14 @@
         android:textSize="15sp"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/challenge_more"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/month_challenge"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5sp"
-        android:text="더보기"
-        android:textSize="15sp"
-        android:layout_alignParentRight="true"
-        tools:ignore="MissingConstraints" />
-
     <View
         android:id="@+id/fourth_line"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:background="#DB7093"
         tools:ignore="MissingConstraints"
-        android:layout_below="@+id/challenge_more"/>
+        android:layout_below="@+id/month_challenge"/>
 
     <TextView
         android:id="@+id/exercise_day"
