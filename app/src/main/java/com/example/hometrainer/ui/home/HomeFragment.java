@@ -26,6 +26,7 @@ import com.example.hometrainer.MainActivity;
 import com.example.hometrainer.R;
 import com.example.hometrainer.ui.challenge.ChallengeFragment;
 import com.example.hometrainer.ui.challenge_one_day.OnedayFragment;
+import com.example.hometrainer.ui.checkbody.BodyCheckFragment;
 
 import static android.content.Context.SENSOR_SERVICE;
 import static androidx.core.content.ContextCompat.getSystemService;
@@ -55,6 +56,15 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         Button challenge_more = (Button) root.findViewById(R.id.challenge_more);
+
+        Button body_check = (Button) root.findViewById(R.id.body_check);
+            body_check.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    MainActivity activity = (MainActivity) getActivity();
+                    activity.replaceFragment(BodyCheckFragment.newInstance());
+                }
+            });
 
         walk = (TextView) root.findViewById(R.id.manbo_result);
 

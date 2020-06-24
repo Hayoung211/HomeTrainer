@@ -13,29 +13,34 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.hometrainer.MainActivity;
 import com.example.hometrainer.R;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragmentX;
 
 
+
+
 public class OnedayFragment1 extends Fragment implements SurfaceHolder.Callback{
 
     private static final String API_KEY ="AIzaSyCWEKIZHSd0tKdOKb8ZIs1lwoNNx10dB4c";
 
-    private static String VIDEO_ID = "swRNeYw1JkY";
+    private static String VIDEO_ID = "swRNeYw1JkY&t=15s";
 
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;
     private Camera camera;
-
+    private static final String TAG = "MYTAG";
 
     public static OnedayFragment1 newInstance() {
 
@@ -57,6 +62,8 @@ public class OnedayFragment1 extends Fragment implements SurfaceHolder.Callback{
 
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.youtube_layout,youTubePlayerFragment).commit();
+
+
 
         youTubePlayerFragment.initialize(API_KEY, new YouTubePlayer.OnInitializedListener() {
             @Override
@@ -82,7 +89,9 @@ public class OnedayFragment1 extends Fragment implements SurfaceHolder.Callback{
 
 
         return rootview;
+
     }
+
 
         @Override
         public void surfaceCreated(SurfaceHolder holder) {

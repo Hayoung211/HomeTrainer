@@ -22,7 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity<EndToast> extends AppCompatActivity {
-    private static String IP_ADDRESS = "172.30.1.37";
+    private static String IP_ADDRESS = "192.168.35.224";
     private static String TAG = "phptest";
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -53,7 +53,7 @@ public class MainActivity<EndToast> extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        String test = "http://172.30.1.37/test1.php";
+        String test = "http://192.168.35.224/test1.php";
         URLConnector task = new URLConnector(test);
 
         task.start();
