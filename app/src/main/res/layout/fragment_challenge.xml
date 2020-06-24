@@ -23,23 +23,15 @@
         android:textSize="20sp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/one_day_challenge_state"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="열려있는 챌린지(3/10)"
-        android:textSize="17sp"
-        android:layout_below="@id/challenge_one_day"
-        tools:ignore="MissingConstraints" />
+
 
     <ImageView
         android:id="@+id/one_day_challenge_thumbnail"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="20dp"
-        android:layout_below="@+id/one_day_challenge_state"
+        android:layout_below="@+id/challenge_one_day"
         android:src="@drawable/one_day_challenge_thumbnail"
         tools:ignore="MissingConstraints"
          />
@@ -49,33 +41,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/one_day_challenge_thumbnail"
-        android:layout_below="@id/one_day_challenge_state"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="95dp"
         android:layout_marginLeft="50dp"
         android:text="전신 유산소 운동"
         android:textSize="17dp"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/one_day_challenge_take_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/one_day_challenge_title"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/one_day_challenge_thumbnail"
-        style="?android:attr/borderlessButtonStyle"
-        android:text="도전"
-        android:textSize="15dp"
-        android:textColor="#0099FF"
-        android:background="#00FF0000"
-        tools:ignore="MissingConstraints" />
 
-    <Button
+
+        <Button
         android:id="@+id/one_day_challenge_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/one_day_challenge_take_up"
+            android:layout_marginTop="40dp"
+        android:layout_below="@id/one_day_challenge_title"
         android:text="더보기"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
@@ -102,23 +81,15 @@
         android:textSize="20sp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/week_day_challenge_state"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="열려있는 챌린지(2/10)"
-        android:textSize="17sp"
-        android:layout_below="@id/challenge_week_day"
-        tools:ignore="MissingConstraints" />
+
 
     <ImageView
         android:id="@+id/week_day_challenge_thumbnail"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="20dp"
-        android:layout_below="@+id/week_day_challenge_state"
+        android:layout_below="@+id/challenge_week_day"
         tools:ignore="MissingConstraints"
         android:src="@drawable/week_day_challenge_thumbnail"
         android:contentDescription="TODO" />
@@ -127,34 +98,20 @@
             android:id="@+id/week_day_challenge_title"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/week_day_challenge_state"
+            android:layout_below="@id/first_line"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="95dp"
             android:layout_toRightOf="@+id/one_day_challenge_thumbnail"
             android:text="8분 전신운동"
             android:textSize="17dp"
             tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/week_day_challenge_take_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/week_day_challenge_title"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/week_day_challenge_thumbnail"
-        style="?android:attr/borderlessButtonStyle"
-        android:text="진행중"
-        android:textSize="15dp"
-        android:textColor="#D32F2F"
-        android:background="#00FF0000"
-        tools:ignore="MissingConstraints" />
-
-    <Button
         android:id="@+id/week_day_challenge_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/week_day_challenge_take_up"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/week_day_challenge_title"
         android:text="더보기"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
@@ -181,24 +138,15 @@
         android:textSize="20sp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/month_day_challenge_state"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="열려있는 챌린지(1/10)"
-        android:textSize="17sp"
-        android:layout_below="@id/challenge_month_day"
-        tools:ignore="MissingConstraints" />
 
     <ImageView
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/month_day_challenge_thumbnail"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="20dp"
-        android:layout_below="@+id/month_day_challenge_state"
+        android:layout_below="@+id/challenge_month_day"
         android:src="@drawable/month_day_challenge_thumbnail"
         tools:ignore="MissingConstraints" />
 
@@ -207,46 +155,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/month_day_challenge_thumbnail"
-        android:layout_below="@id/month_day_challenge_state"
-        android:layout_marginTop="25dp"
+        android:layout_below="@id/second_line"
+        android:layout_marginTop="95dp"
         android:layout_marginLeft="50dp"
         android:text="30분 전신운동"
         android:textSize="17dp"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/month_day_challenge_take_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/month_day_challenge_title"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/month_day_challenge_thumbnail"
-        style="?android:attr/borderlessButtonStyle"
-        android:text="도전"
-        android:textSize="15dp"
-        android:textColor="#0099FF"
-        android:background="#00FF0000"
-        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/month_day_challenge_more"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/month_day_challenge_take_up"
-        android:text="더보기"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/month_day_challenge_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/month_day_challenge_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:text="더보기"
+            tools:ignore="MissingConstraints" />
 
-    <View
+        <View
         android:id="@+id/third_line"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#DB7093"
         android:layout_marginTop="10dp"
         tools:ignore="MissingConstraints"
-        android:layout_below="@+id/one_day_challenge_more"/>
+        android:layout_below="@+id/month_day_challenge_more"/>
 
 
 </RelativeLayout>

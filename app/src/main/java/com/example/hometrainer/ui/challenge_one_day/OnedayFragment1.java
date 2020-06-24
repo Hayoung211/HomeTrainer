@@ -35,12 +35,12 @@ public class OnedayFragment1 extends Fragment implements SurfaceHolder.Callback{
 
     private static final String API_KEY ="AIzaSyCWEKIZHSd0tKdOKb8ZIs1lwoNNx10dB4c";
 
-    private static String VIDEO_ID = "swRNeYw1JkY&t=15s";
+    private static String VIDEO_ID = "nvkFUVkeaNo";
 
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;
     private Camera camera;
-    private static final String TAG = "MYTAG";
+
 
     public static OnedayFragment1 newInstance() {
 

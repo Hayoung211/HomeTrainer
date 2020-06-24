@@ -33,9 +33,8 @@ public class OnedayFragment extends Fragment {
                 one_day1.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        transaction.add(R.id.nav_host_fragment, OnedayFragment1.newInstance());
-                        transaction.addToBackStack(null);
-                        transaction.commit();
+                        MainActivity activity = (MainActivity) getActivity();
+                        activity.replaceFragment(OnedayFragment1.newInstance());
             }
         });
         Button one_day2 = (Button) root.findViewById(R.id.one_day_challenge_take_up2);

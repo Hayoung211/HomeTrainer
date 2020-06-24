@@ -24,7 +24,7 @@ public class OnedayFragment4 extends Fragment implements SurfaceHolder.Callback 
 
     private static final String API_KEY ="AIzaSyCWEKIZHSd0tKdOKb8ZIs1lwoNNx10dB4c";
 
-    private static String VIDEO_ID = "t70t-sklypk&";
+    private static String VIDEO_ID = "VNQpP6C1fJg";
 
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;
