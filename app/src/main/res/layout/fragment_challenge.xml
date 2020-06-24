@@ -47,8 +47,6 @@
         android:textSize="17dp"
         tools:ignore="MissingConstraints" />
 
-
-
         <Button
         android:id="@+id/one_day_challenge_more"
         android:layout_width="wrap_content"
@@ -58,6 +56,10 @@
         android:text="더보기"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
+            android:textSize="20dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="#00FF0000"
+            android:textColor="#DB7093"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -115,6 +117,10 @@
         android:text="더보기"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="#00FF0000"
+        android:textColor="#DB7093"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -172,6 +178,10 @@
             android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:text="더보기"
+            android:textSize="20dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="#00FF0000"
+            android:textColor="#DB7093"
             tools:ignore="MissingConstraints" />
 
         <View

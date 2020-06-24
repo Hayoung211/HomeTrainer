@@ -93,6 +93,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:text="입력"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="#00FF0000"
+        android:textColor="#DB7093"
         android:textSize="25sp" />
 
     <ImageView

@@ -15,14 +15,32 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.hc.client5.http.ClientProtocolException;
 import org.apache.hc.client5.http.classic.HttpClient;
+import org.apache.hc.client5.http.classic.methods.HttpGet;
+import org.apache.hc.client5.http.classic.methods.HttpPost;
+import org.apache.hc.client5.http.entity.UrlEncodedFormEntity;
+import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
+import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator;
+import org.apache.hc.core5.http.ClassicHttpRequest;
+import org.apache.hc.core5.http.ClassicHttpResponse;
+import org.apache.hc.core5.http.HttpHost;
+import org.apache.hc.core5.http.HttpResponse;
+import org.apache.hc.core5.http.NameValuePair;
+import org.apache.hc.core5.http.io.HttpClientResponseHandler;
+import org.apache.hc.core5.http.message.BasicNameValuePair;
+import org.apache.hc.core5.http.protocol.HttpContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PopupActivity extends Activity {
 
@@ -98,40 +116,76 @@ public class PopupActivity extends Activity {
 
     //확인 버튼 클릭
     @SuppressLint("WrongConstant")
-    public void mOnClose(View v){
+    public void mOnClose(View v) throws IOException {
         String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
-        weight = Integer.parseInt(get_weight.getText().toString());
+        String weight = get_weight.getText().toString();
 
-        String test = "http://172.30.1.60/setdatabase.php";
-        URLConnector task = new URLConnector(test);
+        String url = "http://172.30.1.60/setdatabase.php";
+        HttpClient httpClient = new HttpClient() {
+            @Override
+            public HttpResponse execute(ClassicHttpRequest classicHttpRequest) throws IOException {
+                return null;
+            }
+
+            @Override
+            public HttpResponse execute(ClassicHttpRequest classicHttpRequest, HttpContext httpContext) throws IOException {
+                return null;
+            }
+
+            @Override
+            public ClassicHttpResponse execute(HttpHost httpHost, ClassicHttpRequest classicHttpRequest) throws IOException {
+                return null;
+            }
+
+            @Override
+            public HttpResponse execute(HttpHost httpHost, ClassicHttpRequest classicHttpRequest, HttpContext httpContext) throws IOException {
+                return null;
+            }
+
+            @Override
+            public <T> T execute(ClassicHttpRequest classicHttpRequest, HttpClientResponseHandler<? extends T> httpClientResponseHandler) throws IOException {
+                return null;
+            }
+
+            @Override
+            public <T> T execute(ClassicHttpRequest classicHttpRequest, HttpContext httpContext, HttpClientResponseHandler<? extends T> httpClientResponseHandler) throws IOException {
+                return null;
+            }
+
+            @Override
+            public <T> T execute(HttpHost httpHost, ClassicHttpRequest classicHttpRequest, HttpClientResponseHandler<? extends T> httpClientResponseHandler) throws IOException {
+                return null;
+            }
+
+            @Override
+            public <T> T execute(HttpHost httpHost, ClassicHttpRequest classicHttpRequest, HttpContext httpContext, HttpClientResponseHandler<? extends T> httpClientResponseHandler) throws IOException {
+                return null;
+            }
+        };
+        HttpPost httpPost = new HttpPost(url);
+
+        List<NameValuePair> param = new ArrayList<NameValuePair>();
+        param.add(new BasicNameValuePair("day", data));
+        param.add(new BasicNameValuePair("weight", weight));
+        param.add(new BasicNameValuePair("body", encoded));
+
+        try {
+            httpPost.setEntity(new UrlEncodedFormEntity(param));
+            HttpResponse response = httpClient.execute(httpPost);
+            System.out.println("다 보내졌음");
+        } catch (UnsupportedEncodingException e)    {
+            e.printStackTrace();
+        } catch (ClientProtocolException e) {
+            // Log exception
+            e.printStackTrace();
+        } catch (IOException e) {
+            // Log exception
+            e.printStackTrace();
+        }
+//        String test = "http://172.30.1.60/setdatabase.php";
+//        URLConnector task = new URLConnector(test);
 //
 //        task.start();
-//
-//        try{
-//            task.join();
-//            System.out.println("waiting... for result");
-//        }
-//        catch(InterruptedException e){
-//
-//        }
-
-//        String result = task.getResult();
-//
-//        String id;
-//        try {
-//            JSONObject root = new JSONObject(result);
-//            JSONArray ja = root.getJSONArray("result");
-//
-//            for(int i = 0; i < ja.length();i++)
-//            {
-//                JSONObject jo = ja.getJSONObject(i);
-//                id = jo.getString("seq");
-//                System.out.println(id);
-//            }
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-        //액티비티(팝업) 닫기
         finish();
     }
 
